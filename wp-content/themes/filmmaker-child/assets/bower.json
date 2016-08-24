@@ -1,0 +1,27 @@
+{
+  "name": "site-camilagroch",
+  "homepage": "http://brunoluizgr.com",
+  "authors": [
+    "brunoluizgr@gmail.com"
+  ],
+  "description": "Site Groch Filmes",
+  "main": "bower",
+  "keywords": [
+    "grochfilmes",
+    "camilagroch"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "animate.css": "^3.5.2",
+    "scrollreveal": "^3.3.1",
+    "hover": "Hover#^2.0.2"
+  }
+}
