@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'AvenirNextLTPro-Bold';
+  src: url('AvenirNextLTPro-Bold.eot');
+  src: url('AvenirNextLTPro-Bold.woff2') format('woff2'),
+       url('AvenirNextLTPro-Bold.woff') format('woff'),
+       url('AvenirNextLTPro-Bold.ttf') format('truetype'),
+       url('AvenirNextLTPro-Bold.svg#AvenirNextLTPro-Bold') format('svg'),
+       url('AvenirNextLTPro-Bold.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
