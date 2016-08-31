@@ -8,13 +8,12 @@
   //Logo
   #secao-logo{
     background-color: @cor-branco;
-    #logo{
-      padding: 5vh 0;
-    }
+    padding: 5vh 0;
   }
 
   #secao-navs{
     background-color: @cor-azul-primario;
+    border-bottom: 8px solid @cor-roxo-primario;
     .menu-default{
       height: auto;
       #menu-navegacao{
@@ -26,46 +25,6 @@
             a{
               color: @cor-branco;
               font-size: 2rem;
-              &:before{
-                content: '|';
-                width: 2px
-                height: 20px;
-                position: relative;
-                right:10px;
-                color: transparent;
-                transition: color .7s ease;
-              }
-              &::after{
-                content: '|';
-                width: 2px
-                height: 20px;
-                position: relative;
-                left:10px;
-                color: transparent;
-                transition: color .7s ease;
-              }
-            }
-            &:hover{
-              a{
-                &:before{
-                  content: '|';
-                  width: 2px
-                  height: 20px;
-                  position: relative;
-                  right:10px;
-                  color: @cor-branco;
-                  transition: color .7s ease;
-                }
-                &::after{
-                  content: '|';
-                  width: 2px
-                  height: 20px;
-                  position: relative;
-                  left:10px;
-                  color: @cor-branco;
-                  transition: color .7s ease;
-                }
-              }
             }
           }
           li:nth-child(odd){
@@ -86,7 +45,42 @@
   }
 }
 
-//RODAPÉ
-.text-copyright{
-  color: @cor-verde-primario;
+/*
+* BIOGRAFIA / BIO
+*/
+#grochfilmes-biografia{
+  #biografia-texto{
+    .texto-titulo h1{
+      font-family: @font-family-avenir-next-lt-pro;
+      font-size: 3rem;
+      color: @cor-azul-primario;
+      text-transform: uppercase;
+      margin-top: 0;
+      margin-bottom: 5vh;
+    }
+    .texto-conteudo p{
+      font-family: @font-family-avenir-next-lt-pro-demi;
+      font-size: 1.5rem;
+      color: @cor-azul-primario;
+      line-height: 2.5rem;
+    }
+  }
+}
+
+/*
+* FOOTER / RODAPÉ
+*/
+#grochfilmes-rodape{
+  .f-home1{
+    padding-top:0;
+  }
+  .text-copyright{
+    color: @cor-verde-primario;
+    font-family: @font-family-avenir-next-lt-pro-demi;
+    font-size: 1.5rem;
+  }
+}
+
+.conteudo-site{
+  padding-top: 20vh;
 }
