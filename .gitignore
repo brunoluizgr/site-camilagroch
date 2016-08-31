@@ -16,6 +16,14 @@ wp-content/plugins/hello.php
 /sitemap.xml
 /sitemap.xml.gz
 
+_BKP-antigo-site.zip
+wp-admin/error_log
+wp-content/languages/themes
+wp-content/themes/imbalance2/
+wp-content/themes/morningtime-lite/
+wp-content/themes/zerif-lite/
+wp-includes/.htaccess
+
 wp-content/themes/filmmaker/
 wp-content/themes/filmmaker-child/assets/less
 wp-content/plugins/plg-film-maker
