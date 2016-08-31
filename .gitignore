@@ -17,4 +17,5 @@ wp-content/plugins/hello.php
 /sitemap.xml.gz
 
 wp-content/themes/filmmaker/
+wp-content/themes/filmmaker-child/assets/less
 wp-content/plugins/plg-film-maker
