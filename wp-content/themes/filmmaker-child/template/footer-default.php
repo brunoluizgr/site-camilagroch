@@ -26,7 +26,7 @@
               </div>
           </div>
           <div class="container-fluid">
-            <div class="row text-center">
+            <div class="row text-center box-copyright">
               <span class="text-copyright">
                   <?php
                       if(filmmaker_GetOption('filmmaker-footer-text')){

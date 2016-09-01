@@ -1,13 +1,11 @@
 <?php
 /*
-* METABOXES Configuração
+* POSTYPES e suas METABOXES
 */
-//include_once 'metaboxes/setup.php';
-//include_once 'metaboxes/simple-spec.php';
-//include_once 'metaboxes/full-spec.php';
-//include_once 'metaboxes/checkbox-spec.php';
-//include_once 'metaboxes/radio-spec.php';
-//include_once 'metaboxes/select-spec.php';
+include_once 'includes/postypes/cinema-postype.php';
+include_once 'includes/postypes/tv-postype.php';
+include_once 'includes/postypes/projetos-postype.php';
+include_once 'includes/custom-fields.php';
 
 /*
 * Funções DIVERSAS
@@ -61,4 +59,20 @@ if(!function_exists('camilagroch_enqueue_child_scripts')){
     wp_enqueue_script('child-script', get_stylesheet_directory_uri() . '/assets/js/grochfilmes.js');
   }
 }
+
+/*
+* Função que remove os itens do MENU de admin do tema filmmaker
+*/
+add_action('admin_menu', 'custom_menu_remove');
+function custom_menu_remove() {
+    remove_menu_page('edit.php?post_type=crew');
+    remove_menu_page('edit.php?post_type=director');
+    remove_menu_page('edit.php?post_type=film');
+    remove_menu_page('edit.php?post_type=gallery');
+    remove_menu_page('edit.php?post_type=partner');
+    remove_menu_page('edit.php?post_type=team');
+    remove_menu_page('edit.php?post_type=testimonial');
+}
+
+
 ?>
