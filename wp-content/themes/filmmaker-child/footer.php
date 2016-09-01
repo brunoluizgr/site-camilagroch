@@ -1,22 +1,32 @@
+<div class="clearfix"
+  style="<?php
+    if(is_page_template('template/template-bio.php'))
+      echo('display:none;');
+    elseif(is_page_template('template/template-contato.php'))
+      echo('display:none;');
+  ?>"
+></div>
 <?php
-  if(!is_page_template('template/template-bio.php')){
-?>
-<div class="clearfix"></div>
-<?php
-    if (!function_exists('filmmaker_pagination')) {
-      wp_link_pages(array('before' => '<div class="pagination"><strong>'.__('Pages', 'filmmaker').'</strong> : ', 'after' => '</div>', 'next_or_number' => 'number'));
-    }
-    wp_reset_postdata();
+  if (!function_exists('filmmaker_pagination')) {
+    wp_link_pages(array('before' => '<div class="pagination"><strong>'.__('Pages', 'filmmaker').'</strong> : ', 'after' => '</div>', 'next_or_number' => 'number'));
   }
+  wp_reset_postdata();
 ?>
+
 <?php
-  if(!is_page_template('template/template-bio.php')){
-    if(is_page() || is_single()){
+  if(is_page() || is_single()){
 ?>
-    <div class="edit-link"><?php edit_post_link(esc_html__('Edit','filmmaker').get_post_type(), '<p>', '</p>'); ?></div>
+<div class="edit-link"
+  style="<?php
+    if(is_page_template('template/template-bio.php'))
+      echo('display:none;');
+    elseif(is_page_template('template/template-contato.php'))
+      echo('display:none;');
+  ?>"
+><?php edit_post_link(esc_html__('Edit','filmmaker').get_post_type(), '<p>', '</p>'); ?>
+</div>
 <?php
   }
-    }
 ?>
 <footer>
 <?php

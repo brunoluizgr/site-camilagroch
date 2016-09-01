@@ -7,7 +7,7 @@
         $logo_url = $logo_page_setting;
     }
 ?>
-<nav id="menu-grochfilmes" class="navbar navbar-default navbar-fixed-top">
+<nav id="menu-grochfilmes" class="navbar navbar-fixed-top">
   <div class="container-fluid">
     <div class="menu-olay"></div>
     <div id="secao-logo" class="row">
