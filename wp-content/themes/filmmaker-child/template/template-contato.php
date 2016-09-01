@@ -27,7 +27,12 @@
     </div>
     <div id="contato-campos" class="row">
       <div class="col-lg-offset-3 col-lg-6">
-        <?php echo(do_shortcode('[contact-form-7 id="30" title="Groch Filmes - Contato"]')); ?>
+        <?php
+        if(CAMIGROCH_AMBIENTE === 'dev')
+          echo(do_shortcode('[contact-form-7 id="7" title="Groch Filmes - Contato"]'));
+        else
+          echo(do_shortcode('[contact-form-7 id="684" title="Groch Filmes - Contato"]'));
+        ?>
       </div>
     </div>
   </div>
