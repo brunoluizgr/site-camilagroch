@@ -23,7 +23,7 @@
     elseif(is_page_template('template/template-contato.php'))
       echo('display:none;');
   ?>"
-><?php edit_post_link(esc_html__('Edit','filmmaker').get_post_type(), '<p>', '</p>'); ?>
+><?php edit_post_link(esc_html__('Editar Post','grochfilmes'), '<p>', '</p>'); ?>
 </div>
 <?php
   }

@@ -2,7 +2,7 @@
 /*
 * POSTYPE do tipo PROJETO
 */
-add_action( 'init', 'projeto_post_type', 0 );
+add_action('init', 'projeto_post_type', 0);
 function projeto_post_type() {
 
     $labels = array(
@@ -19,8 +19,8 @@ function projeto_post_type() {
         'update_item'           => __( 'Atualizar Item de Projeto', 'grochfilmes' ),
         'view_item'             => __( 'Ver Item de Projeto', 'grochfilmes' ),
         'search_items'          => __( 'Buscar Item de Projeto', 'grochfilmes' ),
-        'not_found'             => __( 'Nenhum item de projeto encontrado', 'grochfilmes' ),
-        'not_found_in_trash'    => __( 'Nenhum item de projeto encontrado na Lixeira', 'grochfilmes' ),
+        'not_found'             => __( 'Nenhum item de projeto encontrado.', 'grochfilmes' ),
+        'not_found_in_trash'    => __( 'Nenhum item de projeto encontrado na Lixeira.', 'grochfilmes' ),
         'items_list'            => __( 'Lista Itens de Projeto', 'grochfilmes' ),
         'items_list_navigation' => __( 'Lista Itens de Projeto - Navegação', 'grochfilmes' ),
         'filter_items_list'     => __( 'Filtrar Lista Itens de Projeto', 'grochfilmes' ),
@@ -29,13 +29,13 @@ function projeto_post_type() {
         'label'                 => __( 'Item de Projeto', 'grochfilmes' ),
         'description'           => __( 'Descrição do Item de Projeto', 'grochfilmes' ),
         'labels'                => $labels,
-        'supports'              => array( 'title', 'author', 'thumbnail', 'excerpt', 'page-attributes', 'editor','featured-post' ),
+        'supports'              => array( 'title', 'thumbnail', 'page-attributes', 'editor','featured-post' ),
         'taxonomies'            => array( 'projeto_category',  ),
         'hierarchical'          => false,
         'public'                => true,
         'show_ui'               => true,
         'show_in_menu'          => true,
-        'menu_position'         => 7,
+        'menu_position'         => null,
         'menu_icon'             => 'dashicons-star-filled',
         'show_in_admin_bar'     => true,
         'show_in_nav_menus'     => true,

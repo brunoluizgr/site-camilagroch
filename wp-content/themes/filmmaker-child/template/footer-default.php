@@ -25,8 +25,9 @@
                   <?php get_template_part('template/social','author' );?>
               </div>
           </div>
-          <div class="container-fluid">
-            <div class="row text-center box-copyright">
+          <div class="container-fluid margin-b-2">
+            <div class="row box-copyright"></div>
+            <div class="row text-center margin-t-1">
               <span class="text-copyright">
                   <?php
                       if(filmmaker_GetOption('filmmaker-footer-text')){

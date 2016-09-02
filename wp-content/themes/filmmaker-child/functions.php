@@ -3,9 +3,9 @@
 * POSTYPES e suas METABOXES
 */
 include_once 'includes/postypes/cinema-postype.php';
-include_once 'includes/postypes/tv-postype.php';
+include_once 'includes/postypes/televisao-postype.php';
 include_once 'includes/postypes/projetos-postype.php';
-include_once 'includes/custom-fields.php';
+include 'includes/custom-fields.php';
 
 /*
 * Funções DIVERSAS
@@ -16,12 +16,14 @@ if(!function_exists('camilagroch_enqueue_scrollrevealjs')){
     wp_enqueue_script('scrollreveal-script', get_stylesheet_directory_uri() . '/assets/bower_components/scrollreveal/dist/scrollreveal.min.js');
   }
 }
+
 add_action('wp_enqueue_scripts', 'camilagroch_enqueue_animatecss');
 if(!function_exists('camilagroch_enqueue_animatecss')){
   function camilagroch_enqueue_animatecss() {
     wp_enqueue_style('animate-style', get_stylesheet_directory_uri() . '/assets/bower_components/animate.css/animate.min.css');
   }
 }
+
 add_action('wp_enqueue_scripts', 'camilagroch_enqueue_hovercss');
 if(!function_exists('camilagroch_enqueue_hovercss')){
   function camilagroch_enqueue_hovercss() {
@@ -29,6 +31,11 @@ if(!function_exists('camilagroch_enqueue_hovercss')){
   }
 }
 
+function grochfilmes_oembed_provider() {
+
+	wp_oembed_add_provider( 'https://youtube.com/*', 'https://youtube.com/oembed', false );
+}
+add_action( 'init', 'grochfilmes_oembed_provider' );
 /*
 * Função que adiciona STYLESHEETS do tema pai, necessário pra funcionamento do tema filho
 */

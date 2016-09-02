@@ -5,7 +5,7 @@
   get_header();
 ?>
 
-<section id="grochfilmes-biografia" class="conteudo-site container-fluid">
+<section id="grochfilmes-biografia" class="conteudo-site container-fluid margin-t-4">
   <div class="row">
     <div id="biografia-imagem" class="row col-lg-6">
       <img class="img-responsive" src="<?php echo(get_stylesheet_directory_uri().'/assets/images/png/biografia-grochfilmes.png'); ?>" alt="" title=""/>

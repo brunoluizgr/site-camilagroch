@@ -2,7 +2,7 @@
 /*
 * POSTYPE do tipo CINEMA
 */
-add_action( 'init', 'cinema_post_type', 0 );
+add_action('init', 'cinema_post_type', 0);
 function cinema_post_type() {
 
     $labels = array(
@@ -19,8 +19,8 @@ function cinema_post_type() {
         'update_item'           => __( 'Atualizar Item de Cinema', 'grochfilmes' ),
         'view_item'             => __( 'Ver Item de Cinema', 'grochfilmes' ),
         'search_items'          => __( 'Buscar Item de Cinema', 'grochfilmes' ),
-        'not_found'             => __( 'Nenhum item de cinema encontrado', 'grochfilmes' ),
-        'not_found_in_trash'    => __( 'Nenhum item de cinema encontrado na Lixeira', 'grochfilmes' ),
+        'not_found'             => __( 'Nenhum item de cinema encontrado.', 'grochfilmes' ),
+        'not_found_in_trash'    => __( 'Nenhum item de cinema encontrado na Lixeira.', 'grochfilmes' ),
         'items_list'            => __( 'Lista Itens de Cinema', 'grochfilmes' ),
         'items_list_navigation' => __( 'Lista Itens de Cinema - Navegação', 'grochfilmes' ),
         'filter_items_list'     => __( 'Filtrar Lista Itens de Cinema', 'grochfilmes' ),
@@ -29,13 +29,13 @@ function cinema_post_type() {
         'label'                 => __( 'Item de Cinema', 'grochfilmes' ),
         'description'           => __( 'Descrição do Item de Cinema', 'grochfilmes' ),
         'labels'                => $labels,
-        'supports'              => array( 'title', 'author', 'thumbnail', 'page-attributes', 'editor','featured-post' ),
+        'supports'              => array( 'title', 'thumbnail'),
         'taxonomies'            => array( 'cinema_category',  ),
         'hierarchical'          => false,
         'public'                => true,
         'show_ui'               => true,
         'show_in_menu'          => true,
-        'menu_position'         => 5,
+        'menu_position'         => null,
         'menu_icon'             => 'dashicons-video-alt',
         'show_in_admin_bar'     => true,
         'show_in_nav_menus'     => true,
@@ -45,11 +45,11 @@ function cinema_post_type() {
         'publicly_queryable'    => true,
         'capability_type'       => 'page',
     );
-    register_post_type( 'cinema', $args );
+    register_post_type('cinema', $args);
 
 }
 
-add_action( 'after_setup_theme', 'cinema_category', 0 );
+add_action('after_setup_theme', 'cinema_category', 0);
 function cinema_category() {
 
     $labels = array(
@@ -60,8 +60,8 @@ function cinema_category() {
         'parent_item'                => __( 'Categoria Pai', 'grochfilmes' ),
         'parent_item_colon'          => __( 'Categoria Pai:', 'grochfilmes' ),
         'new_item_name'              => __( 'Nova Categoria de Item de Cinema', 'grochfilmes' ),
-        'add_new_item'               => __( 'Adicionar Categoria de Item de Cinema', 'grochfilmes' ),
-        'edit_item'                  => __( 'Editar Categoria de Item de Cinema', 'grochfilmes' ),
+        'add_new_item'               => __( 'Adicionar Categoria de Cinema', 'grochfilmes' ),
+        'edit_item'                  => __( 'Editar Categoria de Cinema', 'grochfilmes' ),
         'update_item'                => __( 'Atualizar Categoria de Item de Cinema', 'grochfilmes' ),
         'view_item'                  => __( 'Ver Categoria de Item de Cinema', 'grochfilmes' ),
         'separate_items_with_commas' => __( 'Separe as categoria de item de Cinema por vírgulas', 'grochfilmes' ),
@@ -82,7 +82,7 @@ function cinema_category() {
         'show_in_nav_menus'          => true,
         'show_tagcloud'              => true,
     );
-    register_taxonomy( 'cinema_category', array( 'cinema' ), $args );
+    register_taxonomy('cinema_category', array('cinema'), $args);
 
 }
 

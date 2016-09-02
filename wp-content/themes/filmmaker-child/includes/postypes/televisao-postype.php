@@ -2,8 +2,8 @@
 /*
 * POSTYPE do tipo TV
 */
-add_action('init', 'tv_post_type', 0);
-function tv_post_type() {
+add_action('init', 'televisao_post_type', 0);
+function televisao_post_type() {
 
     $labels = array(
         'name'                  => _x( 'Televisão', 'Post Type General Name', 'grochfilmes' ),
@@ -19,8 +19,8 @@ function tv_post_type() {
         'update_item'           => __( 'Atualizar Item de Televisão', 'grochfilmes' ),
         'view_item'             => __( 'Ver Item de Televisão', 'grochfilmes' ),
         'search_items'          => __( 'Buscar Item de Televisão', 'grochfilmes' ),
-        'not_found'             => __( 'Item de Televisão Não Encontrado', 'grochfilmes' ),
-        'not_found_in_trash'    => __( 'Item de Televisão Não Encontrado na Lixeira', 'grochfilmes' ),
+        'not_found'             => __( 'Nenhum item de televisão encontrado', 'grochfilmes' ),
+        'not_found_in_trash'    => __( 'Nenhum item de televisão encontrado na Lixeira', 'grochfilmes' ),
         'items_list'            => __( 'Lista Itens de Televisão', 'grochfilmes' ),
         'items_list_navigation' => __( 'Lista Itens de Televisão - Navegação', 'grochfilmes' ),
         'filter_items_list'     => __( 'Filtrar Lista Itens de Televisão', 'grochfilmes' ),
@@ -35,7 +35,7 @@ function tv_post_type() {
         'public'                => true,
         'show_ui'               => true,
         'show_in_menu'          => true,
-        'menu_position'         => 6,
+        'menu_position'         => null,
         'menu_icon'             => 'dashicons-format-video',
         'show_in_admin_bar'     => true,
         'show_in_nav_menus'     => true,
@@ -45,12 +45,12 @@ function tv_post_type() {
         'publicly_queryable'    => true,
         'capability_type'       => 'page',
     );
-    register_post_type( 'tv', $args );
+    register_post_type( 'televisao', $args );
 
 }
 
-add_action( 'after_setup_theme', 'tv_category', 0 );
-function tv_category() {
+add_action( 'after_setup_theme', 'televisao_category', 0 );
+function televisao_category() {
 
     $labels = array(
         'name'                       => _x( 'Categorias', 'Taxonomy General Name', 'grochfilmes' ),
@@ -82,7 +82,7 @@ function tv_category() {
         'show_in_nav_menus'          => true,
         'show_tagcloud'              => true,
     );
-    register_taxonomy('tv_category', array('tv'), $args);
+    register_taxonomy('televisao_category', array('televisao'), $args);
 
 }
 
