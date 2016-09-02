@@ -1,0 +1,90 @@
+@import url(https://fonts.googleapis.com/css?family=Inconsolata:400,700);
+
+body{
+	font-weight: 700;
+	background: #FFF;
+	color: #FFF;
+}
+p::-moz-selection {
+    background:rgba(0,169,159,0.75);
+    color:#777;
+}
+p::-webkit-selection {
+    background:rgba(0,169,159,0.75);
+    color:#777;
+}
+p::selection {
+    background:rgba(0,169,159,0.75);
+    color:#777;
+}
+#login{
+	padding: 5% 0 0;
+}
+.login h1 a{
+	width: 295px!important;
+	height: 59px!important;
+	background-image: url('../img/logo-grochfilmes.png')!important;
+	background-size: 295px 59px;
+	margin: 5vh auto!important;
+}
+.login label{
+	color: rgb(16,28,59);
+}
+.login form{
+	margin-top: 0;
+	padding: 26px 24px 5px!important;
+	box-shadow: 0 0 0;
+	-webkit-box-shadow: 0 0 0;
+}
+.login form .input,
+.login form input[type=checkbox],
+.login input[type=text]{
+	font-family: 'Inconsolata', sans-serif;
+	font-weight: 400;
+	color: rgb(42,255,242);
+	background-color: rgb(26,44,94);
+}
+.login form .input:focus,
+.login form input[type=checkbox]:focus,
+.login input[type=text]:focus{
+	border-color: rgb(26,44,94);
+	box-shadow: 0 0 2px rgba(23,39,82,.8);
+	-webkit-box-shadow: 0 0 2px rgba(23,39,82,.8);
+}
+.login form .input:-webkit-autofill{
+	-webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+.login #login_error{
+	color:#000;
+}
+input[type=checkbox]:checked:before{
+	content: '\f335';
+	color: rgb(42,255,242);
+}
+.wp-core-ui .button-primary{
+	width: 275px;
+	height: 50px!important;
+	margin-top: 20px;
+	color: #FFF;
+	background: rgb(129,48,149);
+	border-color: rgb(155,58,179);
+	box-shadow: 0 0 0;
+	-webkit-box-shadow: 0 0 0;
+}
+.wp-core-ui .button-primary.focus,
+.wp-core-ui .button-primary.hover,
+.wp-core-ui .button-primary:focus,
+.wp-core-ui .button-primary:hover{
+	color: #FFF;
+	background: rgb(113,42,130);
+	border-color: rgb(155,58,179);
+	box-shadow: 0 0 0;
+	-webkit-box-shadow: 0 0 0;
+}
+.login #nav a:hover{
+	color: #F00;
+}
+.login .message{
+	color: #700;
+	border-left: 5px solid #F00;
+}
