@@ -6,7 +6,7 @@ add_action('init', 'projeto_post_type', 0);
 function projeto_post_type() {
 
     $labels = array(
-        'name'                  => _x( 'Projeto', 'Post Type General Name', 'grochfilmes' ),
+        'name'                  => _x( 'Projetos', 'Post Type General Name', 'grochfilmes' ),
         'singular_name'         => _x( 'Projeto', 'Post Type Singular Name', 'grochfilmes' ),
         'menu_name'             => __( 'Projetos', 'grochfilmes' ),
         'name_admin_bar'        => __( 'Projeto', 'grochfilmes' ),
@@ -29,7 +29,7 @@ function projeto_post_type() {
         'label'                 => __( 'Item de Projeto', 'grochfilmes' ),
         'description'           => __( 'Descrição do Item de Projeto', 'grochfilmes' ),
         'labels'                => $labels,
-        'supports'              => array( 'title', 'thumbnail', 'page-attributes', 'editor','featured-post' ),
+        'supports'              => array( 'title', 'thumbnail' ),
         'taxonomies'            => array( 'projeto_category',  ),
         'hierarchical'          => false,
         'public'                => true,
@@ -45,11 +45,11 @@ function projeto_post_type() {
         'publicly_queryable'    => true,
         'capability_type'       => 'page',
     );
-    register_post_type( 'projeto', $args );
+    register_post_type('projeto', $args);
 
 }
 
-add_action( 'after_setup_theme', 'projeto_category', 0 );
+add_action('after_setup_theme', 'projeto_category', 0);
 function projeto_category() {
 
     $labels = array(
