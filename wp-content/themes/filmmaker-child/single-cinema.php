@@ -1,7 +1,4 @@
 <?php
-/*
-* Template Name: [GrochFilmes] Services / Cinema - Interna
-*/
   get_header();
 ?>
 
@@ -37,7 +34,14 @@
   <div class="container-fluid">
     <div class="row">
       <img class="col-lg-12 img-responsive" src="<?php echo(wp_get_attachment_url(get_post_thumbnail_id($post->ID))) ?>"></img>
+
+      <!-- video YOUTUBE -->
       <iframe style="display:none;" width="1366" height="675" src="https://www.youtube.com/embed/<?php echo $id ?>?vq=hd720" frameborder="0" allowfullscreen></iframe>
+      <!-- Fim do video YOUTUBE -->
+
+      <!-- video VIMEO -->
+      <iframe style="display:none;" src="//player.vimeo.com/video/VIDEO_ID" width="WIDTH" height="HEIGHT" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      <!-- Fim do video VIMEO-->
     </div>
   </div>
   <div class="container">

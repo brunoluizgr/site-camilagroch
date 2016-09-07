@@ -12,22 +12,6 @@
   }
   wp_reset_postdata();
 ?>
-
-<?php
-  if(is_page() || is_single()){
-?>
-<div class="edit-link"
-  style="<?php
-    if(is_page_template('template/template-bio.php'))
-      echo('display:none;');
-    elseif(is_page_template('template/template-contato.php'))
-      echo('display:none;');
-  ?>"
-><?php edit_post_link(esc_html__('Editar Post','grochfilmes'), '<p>', '</p>'); ?>
-</div>
-<?php
-  }
-?>
 <footer>
 <?php
     if (!is_404()) {

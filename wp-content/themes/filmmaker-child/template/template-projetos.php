@@ -1,11 +1,11 @@
 <?php
 /*
-* Template Name: [GrochFilmes] Services
+* Template Name: [GrochFilmes] Projetos
 */
   get_header();
 ?>
 
-<section id="grochfilmes-services" class="container-fluid conteudo-site">
+<section id="grochfilmes-projetos" class="container-fluid conteudo-site">
   <div class="row">
     <div class="col-lg-offset-1 col-lg-10">
       <p class="text-center">

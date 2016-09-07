@@ -31,11 +31,11 @@ if(!function_exists('camilagroch_enqueue_hovercss')){
   }
 }
 
+add_action( 'init', 'grochfilmes_oembed_provider' );
 function grochfilmes_oembed_provider() {
-
 	wp_oembed_add_provider( 'https://youtube.com/*', 'https://youtube.com/oembed', false );
 }
-add_action( 'init', 'grochfilmes_oembed_provider' );
+
 /*
 * Função que adiciona STYLESHEETS do tema pai, necessário pra funcionamento do tema filho
 */
@@ -80,6 +80,5 @@ function custom_menu_remove() {
     remove_menu_page('edit.php?post_type=team');
     remove_menu_page('edit.php?post_type=testimonial');
 }
-
 
 ?>
