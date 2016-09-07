@@ -1,6 +1,4 @@
-<?php
-  get_header();
-?>
+<?php get_header(); ?>
 
 <?php while(have_posts()) : the_post(); ?>
   <?php
@@ -44,8 +42,8 @@
       <!-- Fim do video VIMEO-->
     </div>
   </div>
-  <div class="container">
-    <div class="row">
+  <div class="container margin-t-4">
+    <div class="row margin-b-4">
       <!-- Inicio da Seção Crédito -->
       <div class="col-lg-12">
         <p class="cinema-credito">
@@ -113,20 +111,24 @@
           </span>
         </p>
       </div>
-      <!-- Fim da Seção IMDB -->
       <?php
         }
       ?>
       <!-- Fim da Seção HIGHLIGHTS -->
+    </div>
+    <!-- Seção Link de Retorno -->
+    <div class="row margin-t-2">
       <div class="col-lg-12">
-        <a href="#" target="_self">
-          <span class="cinema-link-retorno">
+        <a href="<?php echo(site_url('/services')) ?>" target="_self">
+          <span class="televisao-link-retorno">
             <?php _e('<< SERVICES', 'grochfilmes' )?>
           </span>
         </a>
       </div>
     </div>
+    <!-- Fim da Seção Link de Retorno -->
   </div>
 </section>
 <?php endwhile; ?>
+
 <?php get_footer(); ?>

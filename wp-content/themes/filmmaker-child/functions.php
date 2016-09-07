@@ -10,6 +10,7 @@ include 'includes/custom-fields.php';
 /*
 * Funções DIVERSAS
 */
+// ScrollReveal - https://github.com/jlmakes/scrollreveal.js
 add_action('wp_enqueue_scripts', 'camilagroch_enqueue_scrollrevealjs');
 if(!function_exists('camilagroch_enqueue_scrollrevealjs')){
   function camilagroch_enqueue_scrollrevealjs() {
@@ -17,6 +18,7 @@ if(!function_exists('camilagroch_enqueue_scrollrevealjs')){
   }
 }
 
+// AnimateCSS - https://github.com/daneden/animate.css
 add_action('wp_enqueue_scripts', 'camilagroch_enqueue_animatecss');
 if(!function_exists('camilagroch_enqueue_animatecss')){
   function camilagroch_enqueue_animatecss() {
@@ -24,6 +26,7 @@ if(!function_exists('camilagroch_enqueue_animatecss')){
   }
 }
 
+// HoverCSS - https://github.com/IanLunn/Hover
 add_action('wp_enqueue_scripts', 'camilagroch_enqueue_hovercss');
 if(!function_exists('camilagroch_enqueue_hovercss')){
   function camilagroch_enqueue_hovercss() {
@@ -31,6 +34,7 @@ if(!function_exists('camilagroch_enqueue_hovercss')){
   }
 }
 
+// oEmbed
 add_action( 'init', 'grochfilmes_oembed_provider' );
 function grochfilmes_oembed_provider() {
 	wp_oembed_add_provider( 'https://youtube.com/*', 'https://youtube.com/oembed', false );
@@ -68,7 +72,7 @@ if(!function_exists('camilagroch_enqueue_child_scripts')){
 }
 
 /*
-* Função que remove os itens do MENU de admin do tema filmmaker
+* Função que remove os itens do MENU de admin do tema FilmMaker
 */
 add_action('admin_menu', 'custom_menu_remove');
 function custom_menu_remove() {
