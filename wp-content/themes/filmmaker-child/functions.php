@@ -34,12 +34,6 @@ if(!function_exists('camilagroch_enqueue_hovercss')){
   }
 }
 
-// oEmbed
-add_action( 'init', 'grochfilmes_oembed_provider' );
-function grochfilmes_oembed_provider() {
-	wp_oembed_add_provider( 'https://youtube.com/*', 'https://youtube.com/oembed', false );
-}
-
 /*
 * Função que adiciona STYLESHEETS do tema pai, necessário pra funcionamento do tema filho
 */

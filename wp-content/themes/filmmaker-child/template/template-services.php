@@ -8,7 +8,7 @@
 
   <div id="grochfilmes-services-titulo" class="container">
     <div class="row">
-      <div class="col-lg-offset-1 col-lg-10 margin-b-2 text-center">
+      <div class="col-lg-offset-1 col-lg-10 margin-t-2 margin-b-4 text-center">
         <?php
           while (have_posts()): the_post();
             the_content();
@@ -17,50 +17,137 @@
         ?>
       </div>
     </div>
-  <div>
+  </div>
 
   <div id="grochfilmes-services-slides" class="container-fluid">
+    <?php
+      if(CAMIGROCH_AMBIENTE === 'dev')
+      {
+    ?>
     <div class="row">
-      <div id="services-slide-01" class="row col-lg-12 margin-b-1">
-        <?php masterslider("services-slide-01") ?>
-      </div>
-      <div id="services-slide-02" class="row col-lg-12 margin-b-1">
-        <?php masterslider("services-slide-02") ?>
-      </div>
-      <div id="services-slide-03" class="row col-lg-12 margin-b-1">
-        <?php masterslider("services-slide-03") ?>
-      </div>
-      <div id="services-slide-04" class="row col-lg-12 margin-b-1">
-        <?php masterslider("services-slide-04") ?>
-      </div>
-      <div id="services-slide-05" class="row col-lg-12 margin-b-1">
-        <?php masterslider("services-slide-05") ?>
-      </div>
-      <div id="services-slide-06" class="row col-lg-12 margin-b-1">
-        <?php masterslider("services-slide-06") ?>
-      </div>
-      <div id="services-slide-07" class="row col-lg-12 margin-b-1">
-        <?php masterslider("services-slide-07") ?>
-      </div>
-      <div id="services-slide-08" class="row col-lg-12 margin-b-1">
-        <?php masterslider("services-slide-08") ?>
-      </div>
-      <div id="services-slide-09" class="row col-lg-12 margin-b-1">
-        <?php masterslider("services-slide-09") ?>
-      </div>
-      <div id="services-slide-10" class="row col-lg-12 margin-b-1">
-        <?php masterslider("services-slide-10") ?>
-      </div>
-      <div id="services-slide-11" class="row col-lg-12 margin-b-1">
-        <?php masterslider("services-slide-11") ?>
-      </div>
-      <div id="services-slide-12" class="row col-lg-12 margin-b-1">
-        <?php masterslider("services-slide-12") ?>
-      </div>
-      <div id="services-slide-13" class="row col-lg-12 margin-b-1">
-        <?php masterslider("services-slide-13") ?>
+      <div id="services-slide-1" class="row col-lg-12 margin-b-1">
+        <?php masterslider("services-slide") ?>
       </div>
     </div>
+    <?php
+      }
+      else
+      {
+        for($i=1; $i<=7; $i++)
+        {
+    ?>
+    <div id="services-cinema" class="row">
+      <div id="services-slide-<?php echo($i) ?>" class="row col-lg-12 margin-b-1">
+        <?php
+          $post = get_posts(array(
+            'numberposts'	=> 1,
+            'post_status'      => 'publish',
+            'post_type'		=> 'cinema',
+            'meta_key'		=> 'cinema-ordem_importancia',
+            'meta_value'	=> $i
+          ));
+          if($post):
+            $slug = basename(get_permalink($post[0]->ID));
+            $var_list = "services-slide-".$slug;
+            masterslider($var_list);
+          endif;
+        ?>
+      </div>
+      <div id="services-info-<?php echo($i) ?>" class="container-fluid">
+        <div class"row">
+          <div class="col-lg-12">
+            <a href="<?php echo(get_post_permalink($post[0]->ID)); ?>" target="_self">
+              <div class="services-info-detalhes">
+                <div class="info-nome" style="display:none;">
+                  <?php
+                    if($post):
+                      echo(mb_strtoupper(get_the_title($post[0]->ID)));
+                    endif;
+                  ?>
+                </div>
+                <div class="info-barra" style="display:none;">
+                  <?php
+                    if($post):
+                      echo('|');
+                    endif;
+                  ?>
+                </div>
+                <div class="info-especificacoes-tecnicas" style="display:none;">
+                  <?php
+                    if($post):
+                      $especificacoes_tecnicas = get_post_custom_values('cinema-especificacoes_tecnicas', $post[0]->ID);
+                      echo($especificacoes_tecnicas[0]);
+                    endif;
+                  ?>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <?php
+        wp_reset_query();
+        }
+        for($i=1; $i<=6; $i++)
+        {
+    ?>
+    <div id="services-televisao" class="row">
+      <div id="services-slide-<?php echo($i) ?>" class="row col-lg-12 margin-b-1">
+        <?php
+          $post = get_posts(array(
+            'numberposts'	=> 1,
+            'post_status'      => 'publish',
+            'post_type'		=> 'televisao',
+            'meta_key'		=> 'televisao-ordem_importancia',
+            'meta_value'	=> $i
+          ));
+          if($post):
+            $slug = basename(get_permalink($post[0]->ID));
+            $var_list = "services-slide-".$slug;
+            masterslider($var_list);
+          endif;
+        ?>
+      </div>
+      <div id="services-info-<?php echo($i) ?>" class="container-fluid">
+        <div class"row">
+          <div class="col-lg-12">
+            <a href="<?php echo(get_post_permalink($post[0]->ID)); ?>" target="_self">
+              <div class="services-info-detalhes">
+                <div class="info-nome" style="display:none;">
+                  <?php
+                    if($post):
+                      echo(mb_strtoupper(get_the_title($post[0]->ID)));
+                    endif;
+                  ?>
+                </div>
+                <div class="info-barra" style="display:none;">
+                  <?php
+                    if($post):
+                      echo('|');
+                    endif;
+                  ?>
+                </div>
+                <div class="info-especificacoes-tecnicas" style="display:none;">
+                  <?php
+                    if($post):
+                      $especificacoes_tecnicas = get_post_custom_values('televisao-especificacoes_tecnicas', $post[0]->ID);
+                      echo($especificacoes_tecnicas[0]);
+                    endif;
+                  ?>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <?php
+        wp_reset_query();
+        }
+      }
+    ?>
+
   </div>
 
   <div id="grochfilmes-services-link-retorno" class="container">

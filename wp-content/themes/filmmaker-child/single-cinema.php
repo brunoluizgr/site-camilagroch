@@ -2,22 +2,12 @@
 
 <?php while(have_posts()) : the_post(); ?>
   <?php
+    global $post;
+
     $tipo = get_post_type($post->id);
     $categorias = get_the_terms($post->id, 'cinema_category');
     $bg = 'url('.wp_get_attachment_url(get_post_thumbnail_id($post->ID)).')';
-    $url_video = get_field('cinema-video_link');
-    preg_match('/[\\?\\&]v=([^\\?\\&]+)/', $url_video, $matches);
-    $id = $matches[1];
   ?>
-  <style>
-      .detail-item{
-          background-image:linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),<?php echo esc_attr($bg); ?>;
-          background-size: cover;
-          -moz-background-size: cover;
-          -o-background-size: cover;
-          -webkit-background-size: cover
-      }
-  </style>
 <section id="grochfilmes-service-<?php echo($tipo) ?>">
   <div class="container">
     <div class="row">
@@ -31,15 +21,18 @@
   </div>
   <div class="container-fluid">
     <div class="row">
-      <img class="col-lg-12 img-responsive" src="<?php echo(wp_get_attachment_url(get_post_thumbnail_id($post->ID))) ?>"></img>
-
-      <!-- video YOUTUBE -->
-      <iframe style="display:none;" width="1366" height="675" src="https://www.youtube.com/embed/<?php echo $id ?>?vq=hd720" frameborder="0" allowfullscreen></iframe>
-      <!-- Fim do video YOUTUBE -->
-
-      <!-- video VIMEO -->
-      <iframe style="display:none;" src="//player.vimeo.com/video/VIDEO_ID" width="WIDTH" height="HEIGHT" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-      <!-- Fim do video VIMEO-->
+      <div class="cinema-slider">
+        <?php
+          $slider = 'interna-cinema-'.$post->post_name;
+          if(masterslider($slider)){
+            masterslider($slider);
+          }
+          else {
+            $img = wp_get_attachment_url(get_post_thumbnail_id($post->ID));
+            echo('<img style="display:none;" class="col-lg-12 img-responsive" src="'.$img.'"></img>');
+          }
+        ?>
+      </div>
     </div>
   </div>
   <div class="container margin-t-4">
@@ -67,6 +60,14 @@
         </p>
       </div>
       <!-- Fim da Seção Produtora -->
+      <!-- Inicio da Seção Distribuição -->
+      <div class="col-lg-12">
+        <p>
+          <span class="cinema-campo-titulo"><?php _e('Distribuidora | ', 'grochfilmes'); ?></span>
+          <span class="cinema-campo-resposta"><?php echo(get_field('cinema-distribuicao')); ?></span>
+        </p>
+      </div>
+      <!-- Fim da Seção Distribuição -->
       <!-- Inicio da Seção IMDB -->
       <div class="col-lg-12">
         <p>
@@ -120,7 +121,7 @@
     <div class="row margin-t-2">
       <div class="col-lg-12">
         <a href="<?php echo(site_url('/services')) ?>" target="_self">
-          <span class="televisao-link-retorno">
+          <span class="cinema-link-retorno">
             <?php _e('<< SERVICES', 'grochfilmes' )?>
           </span>
         </a>

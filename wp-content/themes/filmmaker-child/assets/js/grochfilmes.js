@@ -1,6 +1,8 @@
 jQuery(function ($) {
   bindaMenuBorderOnHover();
   bindaScrollRevealBiografia();
+  bindaDisplayServices();
+  bindaScrollRevealServices();
 });
 
 var bindaMenuBorderOnHover = function() {
@@ -21,4 +23,17 @@ var bindaScrollRevealBiografia = function() {
   sr2.reveal('.titulo-camilagroch', { origin: 'right', duration: 700, scale: 0.7, mobile: false });
   sr3.reveal('.titulo-nascimento', { origin: 'left', duration: 900, scale: 0.6, mobile: false });
   sr4.reveal('.texto-conteudo', { origin: 'right', duration: 800, scale: 0.8, mobile: false });
+}
+
+var bindaDisplayServices = function() {
+  jQuery('.info-nome').css('display', 'inline-block');
+  jQuery('.info-barra').css('display', 'inline-block');
+  jQuery('.info-especificacoes-tecnicas').css('display', 'inline-block');
+}
+
+var bindaScrollRevealServices = function() {
+  window.sr = ScrollReveal();
+  sr.reveal('.info-nome', { origin: 'left', duration: 1000, easing: 'ease-in', mobile: false });
+  sr.reveal('.info-barra', { origin: 'left', duration: 1500, easing: 'ease-out', mobile: false });
+  sr.reveal('.info-especificacoes-tecnicas', { origin: 'left', duration: 1500, easing: 'ease-out', mobile: false });
 }

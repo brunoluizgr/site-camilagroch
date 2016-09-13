@@ -7,7 +7,7 @@ function cinema_post_type() {
 
     $labels = array(
         'name'                  => _x( 'Cinema', 'Post Type General Name', 'grochfilmes' ),
-        'singular_name'         => _x( 'cinema', 'Post Type Singular Name', 'grochfilmes' ),
+        'singular_name'         => _x( 'Cinema', 'Post Type Singular Name', 'grochfilmes' ),
         'menu_name'             => __( 'Cinema', 'grochfilmes' ),
         'name_admin_bar'        => __( 'Cinema', 'grochfilmes' ),
         'parent_item_colon'     => __( 'Projeto de Cinema-Pai:', 'grochfilmes' ),
@@ -29,7 +29,7 @@ function cinema_post_type() {
         'label'                 => __( 'Item de Cinema', 'grochfilmes' ),
         'description'           => __( 'Descrição do Item de Cinema', 'grochfilmes' ),
         'labels'                => $labels,
-        'supports'              => array( 'title', 'thumbnail' ),
+        'supports'              => array( 'title', 'thumbnail', 'page-attributes' ),
         'taxonomies'            => array( 'cinema_category' ),
         'hierarchical'          => false,
         'public'                => true,

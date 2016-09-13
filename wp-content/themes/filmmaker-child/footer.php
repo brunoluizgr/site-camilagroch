@@ -1,11 +1,3 @@
-<div class="clearfix"
-  style="<?php
-    if(is_page_template('template/template-bio.php'))
-      echo('display:none;');
-    elseif(is_page_template('template/template-contato.php'))
-      echo('display:none;');
-  ?>"
-></div>
 <?php
   if (!function_exists('filmmaker_pagination')) {
     wp_link_pages(array('before' => '<div class="pagination"><strong>'.__('Pages', 'filmmaker').'</strong> : ', 'after' => '</div>', 'next_or_number' => 'number'));

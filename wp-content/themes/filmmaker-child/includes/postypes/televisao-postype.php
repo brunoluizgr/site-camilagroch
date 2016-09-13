@@ -29,7 +29,7 @@ function televisao_post_type() {
         'label'                 => __( 'Item de Televisão', 'grochfilmes' ),
         'description'           => __( 'Descrição do Item de Televisão', 'grochfilmes' ),
         'labels'                => $labels,
-        'supports'              => array( 'title', 'thumbnail' ),
+        'supports'              => array( 'title', 'thumbnail', 'page-attributes' ),
         'taxonomies'            => array( 'televisao_category' ),
         'hierarchical'          => false,
         'public'                => true,
