@@ -7,10 +7,10 @@
 
 <section id="grochfilmes-biografia" class="conteudo-site container-fluid margin-t-4">
   <div class="row">
-    <div id="biografia-imagem" class="row col-sm-5 col-lg-6">
+    <div id="biografia-imagem" class="row col-sm-5 col-lg-4">
       <img class="img-responsive" src="<?php echo(get_stylesheet_directory_uri().'/assets/images/png/biografia-grochfilmes.png'); ?>" alt="" title=""/>
     </div>
-    <div id="biografia-texto" class="col-sm-7 col-lg-5">
+    <div id="biografia-texto" class="col-xs-12 col-sm-7 col-lg-6 col-lg-offset-1">
       <div class="texto-titulo text-center">
         <h1 class="titulo-camilagroch hvr-pulse">Camila Groch</h1>
         <h4 class="titulo-nascimento">Erechim-RS, Brasil, 1977</h4>

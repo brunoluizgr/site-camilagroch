@@ -8,7 +8,7 @@
 
   <div id="grochfilmes-services-titulo" class="container">
     <div class="row">
-      <div class="col-lg-offset-1 col-lg-10 margin-t-2 margin-b-4 text-center">
+      <div class="col-lg-offset-1 col-lg-10 margin-t-1 margin-b-2 text-center">
         <?php
           while (have_posts()): the_post();
             the_content();
@@ -33,75 +33,27 @@
       }
       else
       {
-        for($i=1; $i<=7; $i++)
+        for($i=1; $i<=13; $i++)
         {
     ?>
-    <div id="services-cinema" class="row">
+    <div id="services-cinema-e-televisao" class="row">
       <div id="services-slide-<?php echo($i) ?>" class="row col-lg-12 margin-b-1">
         <?php
-          $post = get_posts(array(
+          $postCinema = get_posts(array(
             'numberposts'	=> 1,
             'post_status'      => 'publish',
             'post_type'		=> 'cinema',
             'meta_key'		=> 'cinema-ordem_importancia',
             'meta_value'	=> $i
           ));
-          if($post):
-            $slug = basename(get_permalink($post[0]->ID));
-            $var_list = "services-slide-".$slug;
-            masterslider($var_list);
-          endif;
-        ?>
-      </div>
-      <div id="services-info-<?php echo($i) ?>" class="container-fluid">
-        <div class"row">
-          <div class="col-lg-12">
-            <a href="<?php echo(get_post_permalink($post[0]->ID)); ?>" target="_self">
-              <div class="services-info-detalhes">
-                <div class="info-nome" style="display:none;">
-                  <?php
-                    if($post):
-                      echo(mb_strtoupper(get_the_title($post[0]->ID)));
-                    endif;
-                  ?>
-                </div>
-                <div class="info-barra" style="display:none;">
-                  <?php
-                    if($post):
-                      echo('|');
-                    endif;
-                  ?>
-                </div>
-                <div class="info-especificacoes-tecnicas" style="display:none;">
-                  <?php
-                    if($post):
-                      $especificacoes_tecnicas = get_post_custom_values('cinema-especificacoes_tecnicas', $post[0]->ID);
-                      echo($especificacoes_tecnicas[0]);
-                    endif;
-                  ?>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <?php
-        wp_reset_query();
-        }
-        for($i=1; $i<=6; $i++)
-        {
-    ?>
-    <div id="services-televisao" class="row">
-      <div id="services-slide-<?php echo($i) ?>" class="row col-lg-12 margin-b-1">
-        <?php
-          $post = get_posts(array(
+          $postTelevisao = get_posts(array(
             'numberposts'	=> 1,
             'post_status'      => 'publish',
             'post_type'		=> 'televisao',
             'meta_key'		=> 'televisao-ordem_importancia',
             'meta_value'	=> $i
           ));
+          $post = array_merge($postCinema, $postTelevisao);
           if($post):
             $slug = basename(get_permalink($post[0]->ID));
             $var_list = "services-slide-".$slug;
@@ -131,8 +83,16 @@
                 <div class="info-especificacoes-tecnicas" style="display:none;">
                   <?php
                     if($post):
-                      $especificacoes_tecnicas = get_post_custom_values('televisao-especificacoes_tecnicas', $post[0]->ID);
-                      echo($especificacoes_tecnicas[0]);
+                      $especificacoesTecnicasCinema = get_post_custom_values('cinema-especificacoes_tecnicas', $post[0]->ID);
+                      $especificacoesTecnicasTelevisao = get_post_custom_values('televisao-especificacoes_tecnicas', $post[0]->ID);
+                      if($especificacoesTecnicasCinema != '')
+                      {
+                        echo($especificacoesTecnicasCinema[0]);
+                      }
+                      else
+                      {
+                        echo($especificacoesTecnicasTelevisao[0]);
+                      }
                     endif;
                   ?>
                 </div>
@@ -147,7 +107,6 @@
         }
       }
     ?>
-
   </div>
 
   <div id="grochfilmes-services-link-retorno" class="container">
