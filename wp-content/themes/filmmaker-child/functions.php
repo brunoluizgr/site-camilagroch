@@ -61,7 +61,11 @@ if(!function_exists('camilagroch_enqueue_child_styles')){
 add_action('wp_enqueue_scripts', 'camilagroch_enqueue_child_scripts');
 if(!function_exists('camilagroch_enqueue_child_scripts')){
   function camilagroch_enqueue_child_scripts() {
-    wp_enqueue_script('child-script', get_stylesheet_directory_uri() . '/assets/js/grochfilmes.js');
+    if(CAMIGROCH_AMBIENTE === 'dev'):
+      wp_enqueue_script('child-script', get_stylesheet_directory_uri() . '/assets/js/grochfilmes.js');
+    else:
+      wp_enqueue_script('child-script', get_stylesheet_directory_uri() . '/assets/js/grochfilmes.min.js');
+    endif;
   }
 }
 

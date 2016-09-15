@@ -85,7 +85,8 @@
               'key' => 'field_cinema-video_link',
               'label' => 'Link do Vídeo (Use SOMENTE links do Vimeo ou YouTube)',
               'name' => 'cinema-video_link',
-              'type' => 'url',
+              'type' => 'text',
+              'default_value' => null,
               'placeholder' => 'https://www.youtube.com/watch?v=_8ZmiqLiZbk',
           ),
           // Highlight 1
@@ -93,24 +94,36 @@
               'key' => 'field_cinema-hightlight-1',
               'label' => 'Link de HightLight 1',
               'name' => 'cinema-hightlight-1',
-              'type' => 'url',
-              'placeholder' => 'http://www.sundance.org/festivals/sundance-film-festival/link-de-hightlight-1',
+              'type' => 'text',
+              'default_value' => null,
+              'placeholder' => 'Rio Intl Film Festival 2006 - Melhor Filme',
+              'prepend' => '',
+              'append' => '',
+              'formatting' => 'html'
           ),
           // Highlight 2
           array (
               'key' => 'field_cinema-hightlight-2',
               'label' => 'Link de HightLight 2',
               'name' => 'cinema-hightlight-2',
-              'type' => 'url',
-              'placeholder' => 'https://www.canneslions.com/link-de-hightlight-2',
+              'type' => 'text',
+              'default_value' => null,
+              'placeholder' => 'Prêmio Especial Jurí - Melhor Ator',
+              'prepend' => '',
+              'append' => '',
+              'formatting' => 'html'
           ),
           // Highlight 3
           array (
               'key' => 'field_cinema-hightlight-3',
               'label' => 'Link de HightLight 3',
               'name' => 'cinema-hightlight-3',
-              'type' => 'url',
-              'placeholder' => 'https://www.sxsw.com/link-de-hightlight-3',
+              'type' => 'text',
+              'default_value' => null,
+              'placeholder' => 'Mostra de Cinema de SP 2006 - Melhor Filme, Prêmio da Crítica',
+              'prepend' => '',
+              'append' => '',
+              'formatting' => 'html'
           ),
           // Ordem Importância
           array (
@@ -240,24 +253,36 @@
               'key' => 'field_televisao-hightlight-1',
               'label' => 'Link de HightLight 1',
               'name' => 'televisao-hightlight-1',
-              'type' => 'url',
-              'placeholder' => 'http://www.sundance.org/festivals/sundance-film-festival/link-de-hightlight-1',
+              'type' => 'text',
+              'default_value' => null,
+              'placeholder' => 'Prêmio Multishow - Melhor Programa Infantil',
+              'prepend' => '',
+              'append' => '',
+              'formatting' => 'html'
           ),
           // Highlight 2
           array (
               'key' => 'field_televisao-hightlight-2',
               'label' => 'Link de HightLight 2',
               'name' => 'televisao-hightlight-2',
-              'type' => 'url',
-              'placeholder' => 'https://www.canneslions.com/link-de-hightlight-2',
+              'type' => 'text',
+              'default_value' => null,
+              'placeholder' => 'Prêmio Tangerina - Melhor Programa Culinário',
+              'prepend' => '',
+              'append' => '',
+              'formatting' => 'html'
           ),
           // Highlight 3
           array (
               'key' => 'field_televisao-hightlight-3',
               'label' => 'Link de HightLight 3',
               'name' => 'televisao-hightlight-3',
-              'type' => 'url',
-              'placeholder' => 'https://www.sxsw.com/link-de-hightlight-3',
+              'type' => 'text',
+              'default_value' => null,
+              'placeholder' => 'Alura Festival 2050 - Best Talk-Show',
+              'prepend' => '',
+              'append' => '',
+              'formatting' => 'html'
           ),
           // Ordem Importância
           array (
@@ -400,24 +425,36 @@
               'key' => 'field_projeto-hightlight-1',
               'label' => 'Link de HightLight 1',
               'name' => 'projeto-hightlight-1',
-              'type' => 'url',
-              'placeholder' => 'http://www.sundance.org/festivals/sundance-film-festival/link-de-hightlight-1',
+              'type' => 'text',
+              'default_value' => null,
+              'placeholder' => '32a Bienal de São Paulo',
+              'prepend' => '',
+              'append' => '',
+              'formatting' => 'html'
           ),
           // Highlight 2
           array (
               'key' => 'field_projeto-hightlight-2',
               'label' => 'Link de HightLight 2',
               'name' => 'projeto-hightlight-2',
-              'type' => 'url',
-              'placeholder' => 'https://www.canneslions.com/link-de-hightlight-2',
+              'type' => 'text',
+              'default_value' => null,
+              'placeholder' => 'Ibermedia 2015',
+              'prepend' => '',
+              'append' => '',
+              'formatting' => 'html'
           ),
           // Highlight 3
           array (
               'key' => 'field_projeto-hightlight-3',
               'label' => 'Link de HightLight 3',
               'name' => 'projeto-hightlight-3',
-              'type' => 'url',
-              'placeholder' => 'https://www.sxsw.com/link-de-hightlight-3',
+              'type' => 'text',
+              'default_value' => null,
+              'placeholder' => 'Edital de Co-Produção Brasil Argentina 2013 FSA',
+              'prepend' => '',
+              'append' => '',
+              'formatting' => 'html'
           ),
           // Ordem Importância
           array (

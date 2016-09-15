@@ -98,6 +98,20 @@
         }
       ?>
       <!-- Fim da Seção Distribuição -->
+      <!-- Inicio da Seção SINOPSE -->
+      <?php if(get_field('projeto-sinopse') != '')
+        {
+      ?>
+      <div class="col-lg-12">
+        <p class="projeto-sinopse">
+          <span class="projeto-campo-titulo"><?php _e('Sinopse | ', 'grochfilmes'); ?></span>
+          <span class="projeto-campo-resposta"><?php echo(get_field('projeto-sinopse')); ?></span>
+        </p>
+      </div>
+      <?php
+        }
+      ?>
+      <!-- Fim da Seção Sinopse -->
       <!-- Inicio da Seção IMDB -->
       <?php if(get_field('projeto-imdb') != '')
         {
@@ -116,20 +130,6 @@
         }
       ?>
       <!-- Fim da Seção IMDB -->
-      <!-- Inicio da Seção SINOPSE -->
-      <?php if(get_field('projeto-sinopse') != '')
-        {
-      ?>
-      <div class="col-lg-12">
-        <p class="projeto-sinopse">
-          <span class="projeto-campo-titulo"><?php _e('Sinopse | ', 'grochfilmes'); ?></span>
-          <span class="projeto-campo-resposta"><?php echo(get_field('projeto-sinopse')); ?></span>
-        </p>
-      </div>
-      <?php
-        }
-      ?>
-      <!-- Fim da Seção IMDB -->
       <!-- Inicio da Seção HIGHLIGHTS -->
       <?php
         if(get_field('projeto-hightlight-1') != '' || get_field('projeto-hightlight-2') != '' || get_field('projeto-hightlight-3') != '')
@@ -137,29 +137,16 @@
       ?>
       <div class="col-lg-12">
         <p class="projeto-hightlights">
-          <span class="projeto-campo-titulo"><?php _e('Hightlights', 'grochfilmes'); ?><p></span>
-        <p>
-          <span class="projeto-link">
-            <a href="<?php echo(get_field('projeto-hightlight-1')) ?>" target="_blank" alt="<?php the_title(); ?>" title="<?php the_title(); ?>">
-              <?php echo(get_field('projeto-hightlight-1')) ?>
-            </a>
-          </span>
+          <span class="projeto-campo-titulo"><?php _e('Hightlights', 'grochfilmes'); ?></span>
         </p>
-        <br>
-        <p>
-          <span class="projeto-link">
-            <a href="<?php echo(get_field('projeto-hightlight-2')) ?>" target="_blank" alt="<?php the_title(); ?>" title="<?php the_title(); ?>">
-              <?php echo(get_field('projeto-hightlight-2')) ?>
-            </a>
-          </span>
+        <p class="hightlight">
+          <?php echo(get_field('projeto-hightlight-1')) ?>
         </p>
-        <br>
-        <p>
-          <span class="projeto-link">
-            <a href="<?php echo(get_field('projeto-hightlight-3')) ?>" target="_blank" alt="<?php the_title(); ?>" title="<?php the_title(); ?>">
-              <?php echo(get_field('projeto-hightlight-3')) ?>
-            </a>
-          </span>
+        <p class="hightlight">
+          <?php echo(get_field('projeto-hightlight-2')) ?>
+        </p>
+        <p class="hightlight">
+          <?php echo(get_field('projeto-hightlight-3')) ?>
         </p>
       </div>
       <?php

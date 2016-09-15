@@ -128,29 +128,16 @@
       ?>
       <div class="col-lg-12">
         <p class="cinema-highlights">
-          <span class="cinema-campo-titulo"><?php _e('Hightlights', 'grochfilmes'); ?><p></span>
-        <p>
-          <span class="cinema-link">
-            <a href="<?php echo(get_field('cinema-hightlight-1')) ?>" target="_blank" alt="<?php the_title(); ?>" title="<?php the_title(); ?>">
-              <?php echo(get_field('cinema-hightlight-1')) ?>
-            </a>
-          </span>
+          <span class="cinema-campo-titulo"><?php _e('Hightlights', 'grochfilmes'); ?></span>
         </p>
-        <br>
-        <p>
-          <span class="cinema-link">
-            <a href="<?php echo(get_field('cinema-hightlight-2')) ?>" target="_blank" alt="<?php the_title(); ?>" title="<?php the_title(); ?>">
-              <?php echo(get_field('cinema-hightlight-2')) ?>
-            </a>
-          </span>
+        <p class="hightlight">
+          <?php echo(get_field('cinema-hightlight-1')) ?>
         </p>
-        <br>
-        <p>
-          <span class="cinema-link">
-            <a href="<?php echo(get_field('cinema-hightlight-3')) ?>" target="_blank" alt="<?php the_title(); ?>" title="<?php the_title(); ?>">
-              <?php echo(get_field('cinema-hightlight-3')) ?>
-            </a>
-          </span>
+        <p class="hightlight">
+          <?php echo(get_field('cinema-hightlight-2')) ?>
+        </p>
+        <p class="hightlight">
+          <?php echo(get_field('cinema-hightlight-3')) ?>
         </p>
       </div>
       <?php
