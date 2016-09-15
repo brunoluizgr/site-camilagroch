@@ -127,9 +127,11 @@
         {
       ?>
       <div class="col-lg-12">
+        <?php/*
         <p class="cinema-highlights">
           <span class="cinema-campo-titulo"><?php _e('Hightlights', 'grochfilmes'); ?></span>
         </p>
+        */?>
         <p class="hightlight">
           <?php echo(get_field('cinema-hightlight-1')) ?>
         </p>

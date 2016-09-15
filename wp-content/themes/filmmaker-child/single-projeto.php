@@ -136,9 +136,11 @@
         {
       ?>
       <div class="col-lg-12">
+        <?php/*
         <p class="projeto-hightlights">
           <span class="projeto-campo-titulo"><?php _e('Hightlights', 'grochfilmes'); ?></span>
         </p>
+        */?>
         <p class="hightlight">
           <?php echo(get_field('projeto-hightlight-1')) ?>
         </p>

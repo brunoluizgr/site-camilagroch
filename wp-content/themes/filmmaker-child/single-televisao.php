@@ -113,12 +113,15 @@
         {
       ?>
       <div class="col-lg-12">
-        <p>
+        <?php/*
+        <p class="televisao-hightlights">
           <span class="televisao-campo-titulo"><?php _e('Hightlights', 'grochfilmes'); ?></span>
         </p>
+        */?>
         <p class="hightlight">
           <?php echo(get_field('televisao-hightlight-1')) ?>
         </p>
+
         <p class="hightlight">
           <?php echo(get_field('televisao-hightlight-2')) ?>
         </p>
