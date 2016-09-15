@@ -11,7 +11,7 @@
   <div class="container-fluid">
     <div class="menu-olay"></div>
     <div id="secao-logo" class="row">
-      <div class="col-xs-offset-1 col-xs-10 col-lg-offset-1 col-lg-2">
+      <div class="col-xs-6 col-xs-offset-3 col-sm-6 col-sm-offset-3 col-lg-offset-1 col-lg-2">
         <a href="<?php echo esc_url(home_url('/')) ?>" title="<?php printf('%s', bloginfo('name'))?>" alt="<?php esc_html_e('LOGO GROCH FILMES','grochfilmes'); ?>">
             <img class="img-responsive" src="<?php echo($logo_url) ?>"/>
         </a>
@@ -31,7 +31,7 @@
     <div id="secao-navs" class="container-fluid">
         <div class="menu-default">
           <div id="menu-navegacao" class="row">
-            <nav class="col-lg-offset-3 col-lg-6">
+            <nav class="col-sm-6 col-sm-offset-3 col-lg-offset-3 col-lg-6">
                 <?php
                     $nav_menu = 'main-menu';
                     if (has_nav_menu($nav_menu)) {

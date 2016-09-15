@@ -8,7 +8,7 @@
 <section id="grochfilmes-contato" class="conteudo-site container-fluid">
   <div class="row">
     <div id="contato-redes-sociais" class="row margin-b-2">
-      <div class="col-lg-6 text-right">
+      <div class="col-xs-6 col-sm-6 col-lg-6 text-right">
         <a id="redes-sociais-linkedin" class="hvr-pulse-grow" href="https://www.linkedin.com/profile/view?id=4235324" target="_blank" alt="LinkedIn" title="LinkedIn">
           <span class="fa-stack fa-lg">
             <i class="fa fa-circle fa-stack-2x texto-verde-primario"></i>
@@ -16,7 +16,7 @@
           </span>
         </a>
       </div>
-      <div class="col-lg-6 text-left">
+      <div class="col-xs-6 col-sm-6 col-lg-6 text-left">
         <a id="redes-sociais-skype" class="hvr-pulse-grow" href="skype:camigroch?call" target="_self" alt="Skype" title="Skype">
           <span class="fa-stack fa-lg">
             <i class="fa fa-circle fa-stack-2x texto-verde-primario"></i>
@@ -26,7 +26,7 @@
       </div>
     </div>
     <div id="contato-campos" class="row">
-      <div class="col-lg-offset-3 col-lg-6">
+      <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-lg-offset-3 col-lg-6">
         <?php
         if(CAMIGROCH_AMBIENTE === 'dev')
           echo(do_shortcode('[contact-form-7 id="7" title="Groch Filmes - Contato"]'));

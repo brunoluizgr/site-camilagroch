@@ -13,9 +13,16 @@
     <div class="row">
       <div class="col-lg-12 margin-t-7 margin-b-4">
         <h1 class="televisao-titulo"><?php the_title();?></h1>
+        <?php
+          if(get_field('televisao-especificacoes_tecnicas') != '')
+          {
+        ?>
         <h4 class="televisao-especificacoes-tecnicas">
           <?php echo(get_field('televisao-especificacoes_tecnicas')); ?>
         </h4>
+        <?php
+          }
+        ?>
       </div>
     </div>
   </div>
@@ -38,31 +45,56 @@
   <div class="container margin-t-4">
     <div class="row margin-b-4">
       <!-- Inicio da Seção Crédito -->
+      <?php
+        if(get_field('televisao-credito') != '')
+        {
+      ?>
       <div class="col-lg-12">
         <p class="televisao-credito">
           <?php echo(get_field('televisao-credito')); ?>
         </p>
       </div>
+      <?php
+        }
+      ?>
       <!-- Fim da Seção Crédito -->
       <!-- Inicio da Seção Direção -->
+      <?php
+        if(get_field('televisao-veiculacao') != '')
+        {
+      ?>
       <div class="col-lg-12">
         <p class="televisao-veiculacao">
           <span class="televisao-campo-titulo"><?php _e('Veiculação | ', 'grochfilmes'); ?></span>
           <span class="televisao-campo-resposta"><?php echo(get_field('televisao-veiculacao')); ?></span>
         </p>
       </div>
+      <?php
+        }
+      ?>
       <!-- Fim da Seção Direção -->
       <!-- Inicio da Seção Produtora -->
+      <?php
+        if(get_field('televisao-produtora') != '')
+        {
+      ?>
       <div class="col-lg-12">
-        <p>
+        <p class="televisao-produtora">
           <span class="televisao-campo-titulo"><?php _e('Produtora | ', 'grochfilmes'); ?></span>
           <span class="televisao-campo-resposta"><?php echo(get_field('televisao-produtora')); ?></span>
         </p>
       </div>
+      <?php
+        }
+      ?>
       <!-- Fim da Seção Produtora -->
       <!-- Inicio da Seção IMDB -->
+      <?php
+        if(get_field('televisao-imdb') != '')
+        {
+      ?>
       <div class="col-lg-12">
-        <p>
+        <p class="televisao-imdb">
           <span class="televisao-campo-titulo"><?php _e('IMDB | ', 'grochfilmes'); ?></span>
           <span class="televisao-link">
             <a href="<?php echo(get_field('televisao-imdb')) ?>" target="_blank" alt="<?php the_title() . _e(' no IMDB', 'grochfilmes');?>" title="<?php the_title() . _e(' no IMDB', 'grochfilmes')?>">
@@ -71,6 +103,9 @@
           </span>
         </p>
       </div>
+      <?php
+        }
+      ?>
       <!-- Fim da Seção IMDB -->
       <!-- Inicio da Seção HIGHLIGHTS -->
       <?php
@@ -112,7 +147,7 @@
     <!-- Seção Link de Retorno -->
     <div class="row margin-t-2">
       <div class="col-lg-12">
-        <a href="<?php echo(site_url('/services')) ?>" target="_self">
+        <a href="<?php echo(site_url('/services/')) ?>" target="_self">
           <span class="televisao-link-retorno">
             <?php _e('<< SERVICES', 'grochfilmes' )?>
           </span>
