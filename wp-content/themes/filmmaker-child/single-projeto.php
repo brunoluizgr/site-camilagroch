@@ -13,7 +13,8 @@
     <div class="row">
       <div class="col-lg-12 margin-t-7 margin-b-4">
         <h1 class="projeto-titulo"><?php the_title();?></h1>
-        <?php if(get_field('projeto-especificacoes_tecnicas') != '')
+        <?php
+          if(get_field('projeto-especificacoes_tecnicas') != '')
           {
         ?>
         <h4 class="projeto-especificacoes-tecnicas">

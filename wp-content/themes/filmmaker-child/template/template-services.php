@@ -69,7 +69,7 @@
                 <div class="info-nome" style="display:none;">
                   <?php
                     if($post):
-                      echo(mb_strtoupper(get_the_title($post[0]->ID)));
+                      echo(get_the_title($post[0]->ID));
                     endif;
                   ?>
                 </div>

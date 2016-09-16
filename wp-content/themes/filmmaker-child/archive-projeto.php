@@ -19,7 +19,7 @@
         if($post):
           $bg = 'url('.wp_get_attachment_url(get_post_thumbnail_id($post[0]->ID)).')';
           $slug = basename(get_permalink($post[0]->ID));
-          $title = mb_strtoupper(get_the_title($post[0]->ID));
+          $title = get_the_title($post[0]->ID);
           $direcao = get_field('projeto-direcao', $post[0]->ID);
         endif;
         if($i<=3):

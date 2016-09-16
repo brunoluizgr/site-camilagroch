@@ -14,7 +14,8 @@
       <div class="col-lg-12 margin-t-7 margin-b-4">
         <h1 class="cinema-titulo"><?php the_title();?></h1>
         <?php
-          if(get_field('cinema-especificacoes_tecnicas') != '') {
+          if(get_field('cinema-especificacoes_tecnicas') != '')
+          {
         ?>
         <h4 class="cinema-especificacoes-tecnicas">
           <?php echo(get_field('cinema-especificacoes_tecnicas')); ?>
