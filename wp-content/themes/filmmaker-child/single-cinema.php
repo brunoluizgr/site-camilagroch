@@ -112,7 +112,7 @@
         <p class="cinema-imdb">
           <span class="cinema-campo-titulo"><?php _e('IMDB | ', 'grochfilmes'); ?></span>
           <span class="cinema-link">
-            <a href="<?php echo(get_field('cinema-imdb')) ?>" target="_blank" alt="<?php the_title() . _e(' no IMDB', 'grochfilmes');?>" title="<?php the_title() . _e(' no IMDB', 'grochfilmes')?>">
+            <a href="<?php echo(get_field('cinema-imdb')) ?>" target="_blank" alt="<?php ucfirst(the_title()) . _e(' no IMDB', 'grochfilmes');?>" title="<?php the_title() . _e(' no IMDB', 'grochfilmes')?>">
               <?php the_title();?>
             </a>
           </span>

@@ -121,7 +121,7 @@
         <p class="projeto-imdb">
           <span class="projeto-campo-titulo"><?php _e('IMDB | ', 'grochfilmes'); ?></span>
           <span class="projeto-link">
-            <a href="<?php echo(get_field('projeto-imdb')) ?>" target="_blank" alt="<?php the_title() . _e(' no IMDB', 'grochfilmes');?>" title="<?php the_title() . _e(' no IMDB', 'grochfilmes')?>">
+            <a href="<?php echo(get_field('projeto-imdb')) ?>" target="_blank" alt="<?php ucfirst(the_title()) . _e(' no IMDB', 'grochfilmes');?>" title="<?php the_title() . _e(' no IMDB', 'grochfilmes')?>">
               <?php the_title();?>
             </a>
           </span>
