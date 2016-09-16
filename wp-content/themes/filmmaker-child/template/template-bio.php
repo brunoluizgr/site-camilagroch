@@ -13,7 +13,7 @@
     <div id="biografia-texto" class="col-xs-12 col-sm-7 col-lg-6 col-lg-offset-1">
       <div class="texto-titulo text-center">
         <h1 class="titulo-camilagroch hvr-pulse">Camila Groch</h1>
-        <h4 class="titulo-nascimento">Erechim-RS, Brasil, 1977</h4>
+        <h4 class="titulo-nascimento">Brasil, 1977</h4>
       </div>
       <div class="texto-conteudo text-center">
         <?php
