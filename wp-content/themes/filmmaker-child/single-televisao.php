@@ -64,6 +64,21 @@
         {
       ?>
       <div class="col-lg-12">
+        <p class="televisao-direcao">
+          <span class="televisao-campo-titulo"><?php _e('Direção | ', 'grochfilmes'); ?></span>
+          <span class="televisao-campo-resposta"><?php echo(get_field('televisao-direcao')); ?></span>
+        </p>
+      </div>
+      <?php
+        }
+      ?>
+      <!-- Fim da Seção Direção -->
+      <!-- Inicio da Seção Veiculação -->
+      <?php
+        if(get_field('televisao-veiculacao') != '')
+        {
+      ?>
+      <div class="col-lg-12">
         <p class="televisao-veiculacao">
           <span class="televisao-campo-titulo"><?php _e('Veiculação | ', 'grochfilmes'); ?></span>
           <span class="televisao-campo-resposta"><?php echo(get_field('televisao-veiculacao')); ?></span>
@@ -72,7 +87,7 @@
       <?php
         }
       ?>
-      <!-- Fim da Seção Direção -->
+      <!-- Fim da Seção Veiculação -->
       <!-- Inicio da Seção Produtora -->
       <?php
         if(get_field('televisao-produtora') != '')

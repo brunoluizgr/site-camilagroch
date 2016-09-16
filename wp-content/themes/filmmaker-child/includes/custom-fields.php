@@ -125,6 +125,42 @@
               'append' => '',
               'formatting' => 'html'
           ),
+          // Highlight 4
+          array (
+              'key' => 'field_cinema-hightlight-4',
+              'label' => 'Link de HightLight 4',
+              'name' => 'cinema-hightlight-4',
+              'type' => 'text',
+              'default_value' => null,
+              'placeholder' => 'Oscar 2018 - Prêmio de Ator Revelação',
+              'prepend' => '',
+              'append' => '',
+              'formatting' => 'html'
+          ),
+          // Highlight 3
+          array (
+              'key' => 'field_cinema-hightlight-5',
+              'label' => 'Link de HightLight 5',
+              'name' => 'cinema-hightlight-5',
+              'type' => 'text',
+              'default_value' => null,
+              'placeholder' => 'Prêmio Locomotiva 2018 - Atores em Construção',
+              'prepend' => '',
+              'append' => '',
+              'formatting' => 'html'
+          ),
+          // Highlight 3
+          array (
+              'key' => 'field_cinema-hightlight-6',
+              'label' => 'Link de HightLight 6',
+              'name' => 'cinema-hightlight-6',
+              'type' => 'text',
+              'default_value' => null,
+              'placeholder' => 'Prêmio CineShot - Melhor Longa Sci-Fi',
+              'prepend' => '',
+              'append' => '',
+              'formatting' => 'html'
+          ),
           // Ordem Importância
           array (
               'key' => 'field_cinema-ordem_importancia',
@@ -206,6 +242,19 @@
             'formatting' => 'html',
             'maxlength' => '100'
           ),
+          // Direção
+          array (
+              'key' => 'field_televisao-direcao',
+              'label' => 'Direção (máx: 90 caracteres - use a barra vertical \'|\' para separar itens)',
+              'name' => 'televisao-direcao',
+              'type' => 'text',
+              'default_value' => null,
+              'placeholder' => 'Yudi Tamashiro',
+              'prepend' => '',
+              'append' => '',
+              'formatting' => 'html',
+              'maxlength' => '90'
+          ),
           // Produtora
           array (
               'key' => 'field_televisao_produtora',
@@ -280,6 +329,42 @@
               'type' => 'text',
               'default_value' => null,
               'placeholder' => 'Alura Festival 2050 - Best Talk-Show',
+              'prepend' => '',
+              'append' => '',
+              'formatting' => 'html'
+          ),
+          // Highlight 4
+          array (
+              'key' => 'field_televisao-hightlight-4',
+              'label' => 'Link de HightLight 4',
+              'name' => 'televisao-hightlight-4',
+              'type' => 'text',
+              'default_value' => null,
+              'placeholder' => 'Festival Globo - Melhor Pocket-Show',
+              'prepend' => '',
+              'append' => '',
+              'formatting' => 'html'
+          ),
+          // Highlight 5
+          array (
+              'key' => 'field_televisao-hightlight-5',
+              'label' => 'Link de HightLight 5',
+              'name' => 'televisao-hightlight-5',
+              'type' => 'text',
+              'default_value' => null,
+              'placeholder' => 'Mostra TVCultura de Televisão - Melhor Programa',
+              'prepend' => '',
+              'append' => '',
+              'formatting' => 'html'
+          ),
+          // Highlight 6
+          array (
+              'key' => 'field_televisao-hightlight-6',
+              'label' => 'Link de HightLight 6',
+              'name' => 'televisao-hightlight-6',
+              'type' => 'text',
+              'default_value' => null,
+              'placeholder' => 'Mostra SBT - Melhor Programa de Domingo',
               'prepend' => '',
               'append' => '',
               'formatting' => 'html'
@@ -452,6 +537,42 @@
               'type' => 'text',
               'default_value' => null,
               'placeholder' => 'Edital de Co-Produção Brasil Argentina 2013 FSA',
+              'prepend' => '',
+              'append' => '',
+              'formatting' => 'html'
+          ),
+          // Highlight 4
+          array (
+              'key' => 'field_projeto-hightlight-4',
+              'label' => 'Link de HightLight 4',
+              'name' => 'projeto-hightlight-4',
+              'type' => 'text',
+              'default_value' => null,
+              'placeholder' => '9º Rencontres Internationales du Documentaire de Montréal',
+              'prepend' => '',
+              'append' => '',
+              'formatting' => 'html'
+          ),
+          // Highlight 5
+          array (
+              'key' => 'field_projeto-hightlight-5',
+              'label' => 'Link de HightLight 5',
+              'name' => 'projeto-hightlight-5',
+              'type' => 'text',
+              'default_value' => null,
+              'placeholder' => '41º Karlovy Vary International Film Festival',
+              'prepend' => '',
+              'append' => '',
+              'formatting' => 'html'
+          ),
+          // Highlight 6
+          array (
+              'key' => 'field_projeto-hightlight-6',
+              'label' => 'Link de HightLight 6',
+              'name' => 'projeto-hightlight-6',
+              'type' => 'text',
+              'default_value' => null,
+              'placeholder' => '21º Guadalajara International Film Festival',
               'prepend' => '',
               'append' => '',
               'formatting' => 'html'
