@@ -90,7 +90,7 @@
       ?>
       <div class="col-lg-12">
         <p class="projeto-distribuicao">
-          <span class="projeto-campo-titulo"><?php _e('Distribuidora | ', 'grochfilmes'); ?></span>
+          <span class="projeto-campo-titulo"><?php _e('Distribução | ', 'grochfilmes'); ?></span>
           <span class="projeto-campo-resposta"><?php echo(get_field('projeto-distribuicao')); ?></span>
         </p>
       </div>
