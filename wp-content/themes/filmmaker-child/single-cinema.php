@@ -123,7 +123,7 @@
       <!-- Fim da Seção IMDB -->
       <!-- Inicio da Seção HIGHLIGHTS -->
       <?php
-        if(get_field('cinema-hightlight-1') != '' || get_field('cinema-hightlight-2') != '' || get_field('cinema-hightlight-3') != '')
+        if(get_field('cinema-hightlight-1') != '' || get_field('cinema-hightlight-2') != '' || get_field('cinema-hightlight-3') != '' || get_field('cinema-hightlight-4') != '' || get_field('cinema-hightlight-5') != '' || get_field('cinema-hightlight-6') != '')
         {
       ?>
       <div class="col-lg-12">
@@ -140,6 +140,15 @@
         </p>
         <p class="hightlight">
           <?php echo(get_field('cinema-hightlight-3')) ?>
+        </p>
+        <p class="hightlight">
+          <?php echo(get_field('cinema-hightlight-4')) ?>
+        </p>
+        <p class="hightlight">
+          <?php echo(get_field('cinema-hightlight-5')) ?>
+        </p>
+        <p class="hightlight">
+          <?php echo(get_field('cinema-hightlight-6')) ?>
         </p>
       </div>
       <?php
