@@ -13,6 +13,19 @@
     ================================================== -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="profile" href="http://gmpg.org/xfn/11" />
+
+    <?php // Facebook Open Graph ?>
+		<meta property="og:locale" content="pt_BR">
+		<meta property="og:url" content="http://camilagroch.com.br">
+		<meta property="og:type" content="website">
+		<meta property="og:site_name" content="<?php _e('Groch Filmes', 'grochfilmes') ?>">
+		<meta property="og:title" content="<?php _e('Groch Filmes', 'grochfilmes') ?>">
+		<meta property="og:description" content="<?php _e('Produtora Executiva de conteúdo Audiovisual.', 'grochfilmes') ?>">
+		<meta property="og:image" content="<?php echo(get_template_directory_uri() . '/assets/images/png/fb-og_img.png'); ?>">
+		<meta property="og:image:type" content="image/png">
+		<meta property="og:image:width" content="1200">
+		<meta property="og:image:height" content="630">
+    <?php // Facebook APP Config ?>
     <script>
       window.fbAsyncInit = function() {
         FB.init({
