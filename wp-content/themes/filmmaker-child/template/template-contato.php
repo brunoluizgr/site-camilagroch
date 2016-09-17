@@ -6,18 +6,12 @@
 ?>
 
 <section id="grochfilmes-contato" class="conteudo-site container-fluid">
-  <div class="row">
-    <div class="col-lg-6">
-      <div id="contato-mapa" class="row">
-          <?php
-          if(CAMIGROCH_AMBIENTE === 'dev')
-            echo(do_shortcode('[wpgmza id="1"]'));
-          else
-            echo(do_shortcode('[wpgmza id="1"]'));
-          ?>
+  <div class="row row-eq-height">
+    <div class="row hidden-xs col-sm-6 col-md-6 col-lg-6">
+      <div id="contato-mapa" class="row" style="width: 100%; height: 100%;">
       </div>
     </div>
-    <div class="col-lg-6">
+    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
       <div id="contato-redes-sociais" class="row margin-b-2">
         <div class="col-xs-6 col-sm-6 col-lg-6 text-right">
           <a id="redes-sociais-linkedin" class="hvr-pulse-grow" href="https://www.linkedin.com/profile/view?id=4235324" target="_blank" alt="LinkedIn" title="LinkedIn">
@@ -37,7 +31,7 @@
         </div>
       </div>
       <div id="contato-campos" class="row">
-        <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-lg-offset-3 col-lg-6">
+        <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-lg-8 col-lg-offset-2">
           <?php
           if(CAMIGROCH_AMBIENTE === 'dev')
             echo(do_shortcode('[contact-form-7 id="7" title="Groch Filmes - Contato"]'));

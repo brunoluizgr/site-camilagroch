@@ -20,7 +20,7 @@
 		<meta property="og:type" content="website">
 		<meta property="og:site_name" content="<?php _e('Groch Filmes', 'grochfilmes') ?>">
 		<meta property="og:title" content="<?php _e('Groch Filmes', 'grochfilmes') ?>">
-		<meta property="og:description" content="<?php _e('Produtora Executiva de conteúdo Audiovisual.', 'grochfilmes') ?>">
+		<meta property="og:description" content="<?php _e('Produtora Executiva independente de conteúdo audiovisual.', 'grochfilmes') ?>">
 		<meta property="og:image" content="<?php echo(get_stylesheet_directory_uri() . '/assets/images/png/fb-og_img.png'); ?>">
 		<meta property="og:image:type" content="image/png">
 		<meta property="og:image:width" content="1200">
@@ -43,6 +43,11 @@
          fjs.parentNode.insertBefore(js, fjs);
        }(document, 'script', 'facebook-jssdk'));
      </script>
+
+     <?php // Google Map API ?>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkWhPKSXihv_ljFJ-gtpoqLoYHCL1utt4&callback=initialize">
+    </script>
 
     <?php wp_head(); ?>
 </head>
