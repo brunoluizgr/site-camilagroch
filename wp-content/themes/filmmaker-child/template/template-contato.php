@@ -9,18 +9,18 @@
   <div class="row row-eq-height">
     <div class="row hidden-xs col-sm-6 col-md-6 col-lg-6">
       <div id="contato-mapa" class="row">
-        <div id="mapa-endereco" class="row col-lg-6 margin-b-1">
+        <div id="mapa-endereco" class="row margin-b-1 text-center">
           <span class="row endereco-1">
-            <?php _e('Endereço |', 'grochfilmes') ?>
+            <?php _e('Endereço', 'grochfilmes') ?>
           </span>
           <span class="row endereco-2">
-            <?php _e('Rua Dona Maria Paula, 78 / 10o andar - Bela Vista', 'grochfilmes') ?>
+            <?php _e('Rua Dona Maria Paula, 78 / 10º andar - Bela Vista', 'grochfilmes') ?>
           </span>
           <span class="row endereco-3">
             <?php _e('CEP 01319-000 - Sao Paulo - SP - Brasil', 'grochfilmes') ?>
           </span>
         </div>
-        <div id="mapa-gmaps" class="row col-lg-6">
+        <div id="mapa-gmaps" class="row">
           <?php
           if(CAMIGROCH_AMBIENTE === 'dev')
             echo(do_shortcode('[wpgmza id="1"]'));
