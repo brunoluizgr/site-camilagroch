@@ -16,7 +16,7 @@
 
     <?php // Facebook Open Graph ?>
 		<meta property="og:locale" content="pt_BR">
-		<meta property="og:url" content="http://camilagroch.com.br">
+		<meta property="og:url" content="http://grochfilmes.com">
 		<meta property="og:type" content="website">
 		<meta property="og:site_name" content="<?php _e('Groch Filmes', 'grochfilmes') ?>">
 		<meta property="og:title" content="<?php _e('Groch Filmes', 'grochfilmes') ?>">

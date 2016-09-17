@@ -99,7 +99,7 @@ if (!function_exists('grochfilmes_dashboard_widget')){
 	{
 		echo "
 		<ul>
-			<li id='dashboard_widget_author'>Autor da Rede: <a href='https://camilagroch.com.br' target='_blank'>Camila Groch</a></li>
+			<li id='dashboard_widget_author'>Autor da Rede: <a href='https://grochfilmes.com' target='_blank'>Camila Groch</a></li>
 			<li id='dashboard_widget_hosting'>Provedor de Hospedagem: <a href='https://br.godaddy.com/' target='_blank'>GoDaddy</a></li>
 			<li id='dashboard_widget_domain'>Provedor de Domínio: <a href='http://www.locaweb.com.br' target='_blank'>LocaWeb</a></li>
 			<li id='dashboard_widget_date'>Data de Lançamento da Rede: Setembro de 2016</li>
