@@ -1,4 +1,4 @@
-<footer id="grochfilmes-rodape">
+<footer id="grochfilmes-rodape" class="padding-t-4">
   <div class="container-fluid margin-b-2">
     <div class="row box-copyright"></div>
     <div class="row text-center margin-t-1">
