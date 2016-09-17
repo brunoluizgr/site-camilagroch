@@ -46,7 +46,7 @@
 
      <?php // Google Map API ?>
     <script async defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkWhPKSXihv_ljFJ-gtpoqLoYHCL1utt4&callback=bindaGoogleMaps">
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkWhPKSXihv_ljFJ-gtpoqLoYHCL1utt4&callback=initialize">
     </script>
 
     <?php wp_head(); ?>
