@@ -21,7 +21,7 @@
 		<meta property="og:site_name" content="<?php _e('Groch Filmes', 'grochfilmes') ?>">
 		<meta property="og:title" content="<?php _e('Groch Filmes', 'grochfilmes') ?>">
 		<meta property="og:description" content="<?php _e('Produtora Executiva de conteúdo Audiovisual.', 'grochfilmes') ?>">
-		<meta property="og:image" content="<?php echo(get_template_directory_uri() . '/assets/images/png/fb-og_img.png'); ?>">
+		<meta property="og:image" content="<?php echo(get_stylesheet_directory_uri() . '/assets/images/png/fb-og_img.png'); ?>">
 		<meta property="og:image:type" content="image/png">
 		<meta property="og:image:width" content="1200">
 		<meta property="og:image:height" content="630">
