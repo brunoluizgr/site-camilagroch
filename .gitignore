@@ -26,4 +26,5 @@ wp-includes/.htaccess
 
 wp-content/themes/filmmaker/
 wp-content/themes/filmmaker-child/assets/less
+wp-content/themes/filmmaker-child/assets/js/grochfilmes.js
 wp-content/plugins/plg-film-maker
