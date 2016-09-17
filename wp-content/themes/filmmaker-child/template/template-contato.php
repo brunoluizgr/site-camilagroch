@@ -8,7 +8,13 @@
 <section id="grochfilmes-contato" class="conteudo-site container-fluid">
   <div class="row row-eq-height">
     <div class="row hidden-xs col-sm-6 col-md-6 col-lg-6">
-      <div id="contato-mapa" class="row" style="width: 100%; height: 100%;">
+      <div id="contato-mapa" class="row">
+        <?php
+        if(CAMIGROCH_AMBIENTE === 'dev')
+          echo(do_shortcode('[wpgmza id="1"]'));
+        else
+          echo(do_shortcode('[wpgmza id="1"]'));
+        ?>
       </div>
     </div>
     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
