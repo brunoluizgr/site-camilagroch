@@ -17,7 +17,7 @@
             <?php _e('Rua Dona Maria Paula, 78 / 10º andar - Bela Vista', 'grochfilmes') ?>
           </span>
           <span class="row endereco-3">
-            <?php _e('CEP 01319-000 - Sao Paulo - SP - Brasil', 'grochfilmes') ?>
+            <?php _e('CEP 01319-000 - São Paulo/SP - Brasil', 'grochfilmes') ?>
           </span>
         </div>
         <div id="mapa-gmaps" class="row">
