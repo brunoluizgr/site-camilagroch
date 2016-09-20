@@ -50,7 +50,7 @@
         </div>
       </div>
       <div id="contato-campos" class="row">
-        <div class="col-xs-10 col-xs-offset-2 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
+        <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
           <?php
           if(CAMIGROCH_AMBIENTE === 'dev')
             echo(do_shortcode('[contact-form-7 id="7" title="Groch Filmes - Contato"]'));
